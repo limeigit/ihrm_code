@@ -6,15 +6,16 @@ import app
 from api.EmpApi import EmpCRUD
 import pymysql
 
-# 1.创建连接
-conncet = pymysql.connect(host = "182.92.81.159",username = "readuser",password = "iHRM_user_2019",port = 3306 )
-# 2.创建游标对象
-cursor = conncet.cursor()
-# 3.创建并执行sql语句
-cursor.execute("select id from bs_user where username = 'zbz'")
-# 4.获取查询结果
-result = cursor.fetchone()
-print("查询的结果为：",result)
+# # 1.创建连接
+# conncet = pymysql.connect(host = "182.92.81.159",username = "readuser",password = "iHRM_user_2019",port = 3306 )
+# # 2.创建游标对象
+# cursor = conncet.cursor()
+# # 3.创建并执行sql语句
+# cursor.execute("select id from bs_user where username = 'zbz'")
+# # 4.获取查询结果
+# result = cursor.fetchone()
+# print("查询的结果为：",result)
+
 # 创建测试类
 class TestEmp(unittest.TestCase):
     # 定义初始化方法
