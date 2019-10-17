@@ -15,7 +15,7 @@ suite.addTest(unittest.makeSuite(TestEmp))  # 添加员工管理模块的整个�
 # runner = unittest.TextTestRunner()
 # runner.run(suite)
 
-filename = "./report/rep.html"  # 测试报告的存储路径
-with open(filename, "w", encoding="utf-8") as f:
+filename = "./report/ihrm_test_result.html"  # 测试报告的存储路径
+with open(filename, "wb") as f:
     runner = HTMLTestRunner(f, title="ihrm测试报告", description="登陆、员工模块的测试报告")
     runner.run(suite)

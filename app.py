@@ -17,7 +17,7 @@ def set_my_log():
     logger.setLevel(logging.INFO)
     # 2.创建处理器
     ls = logging.StreamHandler()  # 控制台处理器
-    filename = pro_path + "/log/ihrm{}.log".format(time.strftime("%Y%m%D%H%M%S"))
+    filename = pro_path + "/log/ihrm.log"
     lh = logging.handlers.TimedRotatingFileHandler(filename=filename, when="M", interval=1, backupCount=3,encoding="utf-8")
     # 3.设置格式器
     fmt = "%(asctime)s %(levelname)s [%(name)s] [%(filename)s(%(funcName)s:%(lineno)d)] - %(message)s"
